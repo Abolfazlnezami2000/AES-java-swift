@@ -36,7 +36,7 @@ class _HomePageState extends State<HomePage> {
       var result = await encryptionChannel.invokeMethod(
         'encrypt',
         {
-          'data': jsonString,
+          'data': "jsonString",
           'key': key,
         },
       );

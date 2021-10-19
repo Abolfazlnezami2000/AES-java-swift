@@ -1,7 +1,6 @@
 package com.example.aes;
 
 import android.util.Base64;
-import android.util.Log;
 import java.security.NoSuchAlgorithmException;
 import javax.crypto.Cipher;
 import javax.crypto.NoSuchPaddingException;
