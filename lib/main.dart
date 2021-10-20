@@ -8,7 +8,7 @@ void main() async {
   String value = "EFJHcHplbkp1WTNOWVFXOVIgUAGCjCWo8VkhC8kdpmEljVB1aLzZB3H91YNFuQ2D9hgsg6ezdkXMEE0ld9G5wj/E";
   String key = 'DjszrncsXAoQ2bed';
 
-  const platform = MethodChannel('samples.flutter.dev/battery');
+  const platform = MethodChannel('aes.channel/decrypt');
   final String greeting =
       await platform.invokeMethod('decrypt', {'value': value, 'key': key});
   print(greeting);
