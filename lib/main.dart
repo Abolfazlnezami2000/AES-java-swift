@@ -1,8 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 
 void main() async {
+  String value = "EFJHcHplbkp1WTNOWVFXOVIgUAGCjCWo8VkhC8kdpmEljVB1aLzZB3H91YNFuQ2D9hgsg6ezdkXMEE0ld9G5wj/E";
+  String key = 'DjszrncsXAoQ2bed';
+
+  const platform = MethodChannel('samples.flutter.dev/battery');
+  final String greeting =
+      await platform.invokeMethod('decrypt', {'value': value, 'key': key});
+  print(greeting);
+
   runApp(MyApp());
 }
 
@@ -14,7 +23,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: HomePage(),
+      home: Container(
+        child: Image.asset('assets/image.png'),
+      ),
     );
   }
 }
@@ -25,7 +36,6 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-
   String encryptedData = '';
   String decryptedData = '';
 
