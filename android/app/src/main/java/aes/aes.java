@@ -77,17 +77,6 @@ public class aes {
     public static String aesDecryption(String base64File, String key) throws Exception {
         byte[] decrypted = decrypt(key, base64File);
 
-        int[] decryptedAsInt = new int[decrypted.length];
-
-        for (int i = 0; i < decryptedAsInt.length; i++) {
-            if (decryptedAsInt[i] < 0){
-                decryptedAsInt[i] = 256 + decryptedAsInt[i];
-            }
-            else{
-                decryptedAsInt[i] = decryptedAsInt[i];
-            }
-        }
-
-        return convertToBase64(decryptedAsInt);
+        return new String(decrypted);
     }
 }

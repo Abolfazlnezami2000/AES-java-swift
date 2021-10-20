@@ -4,6 +4,7 @@ import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 
 void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   String value = "EFJHcHplbkp1WTNOWVFXOVIgUAGCjCWo8VkhC8kdpmEljVB1aLzZB3H91YNFuQ2D9hgsg6ezdkXMEE0ld9G5wj/E";
   String key = 'DjszrncsXAoQ2bed';
 
